@@ -1,0 +1,225 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+	
+body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	background: #eee;
+	font-family:'Roboto', sans-serif;;
+	font-size: 62.5%;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	 font-size: 1em;
+}
+
+a {
+	transition: all 0.5s ease-in-out;
+}
+
+.page-width {
+	width: 90%;
+	max-width: 960px; /*old school padding good for readability*/
+	margin: 0 auto;
+}
+
+.top {
+	background-image: url(../portfolio-assessment-images/background-portfolio.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	color: #eee;
+	width:100%;
+}
+
+.sparkle{
+    position: absolute;
+    left: -45%;
+    height: 100%;
+    width: 45%;
+    background-image: linear-gradient(to left, rgba(251,251,251, .05), rgba(251,251,251, .3), rgba(251,251,251, .6), rgba(251,251,251, .3), rgba(251,251,251, .05));
+    background-image: -moz-linear-gradient(to left, rgba(251,251,251, .05), rgba(251,251,251, .3), rgba(251,251,251, .6), rgba(251,251,251, .3), rgba(251,251,251, .05));
+    background-image: -webkit-linear-gradient(to left, rgba(251,251,251, .05), rgba(251,251,251, .3), rgba(251,251,251, .6), rgba(251,251,251, .3), rgba(251,251,251, .05));
+    animation: loading 5s infinite;
+    z-index: 45;
+}
+
+@keyframes loading {
+    0%{
+        left: -45%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.top .top-nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: stretch;
+	align-items: flex-start;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	padding-top: 30px;
+
+}
+
+.top a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.top a:link,
+.top a:visited {
+	opacity: 1;
+}
+
+.top a:hover,
+.top a:active {
+	opacity: 0.7;
+}
+
+.top .top-nav h1,
+.top .top-nav nav {
+	order: 0;
+	flex: 0 1 auto;
+	align-self: auto;
+}
+
+.top .top-nav nav ul {
+	list-style: none;
+	width: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: stretch;
+	align-items: flex-start;
+}
+	
+.top .top-nav nav li {
+	order: 0;
+	flex: 0 1 auto;
+	align-self: auto;
+	padding-left: 1.5em;
+	text-decoration: none ;
+}
+
+.top .name {
+	width: 100%;
+	position: relative;
+	min-height: 400px;
+}
+
+.top .name:after {/*trick for forcing aspect ratio*/
+	content: ''; 
+	display: block;
+	padding-bottom: 56.25%; /*16/9*/
+} /*psudo class trick for aspect ratio*/
+
+.top .name .description {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%); /*X Y position*/
+}
+
+.top .name .description h2 {
+	font-size: 4em;
+	margin-bottom: 0.5em;
+}
+
+.logo{
+    background-image: url(../portfolio-assessment-images/logo-new.svg)
+}
+
+main {
+	text-align: left;
+	font-size: 1.3em;
+	position: relative;
+	line-height: 160%;
+    background-color: #111133;
+    color: #fff;
+}
+
+.page-content {
+	/*background-image: url(../images/main-back.svg);*/
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.grid{
+    text-align: center;
+	font-size: 1.3em;
+}
+
+.about-me{
+
+}
+
+
+.profile-picture{
+    background-image: url(../portfolio-assessment-images/profile.jpg);
+    background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size:contain;
+}
+.about-me-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    }
+    
+    .profile-picture { grid-area: 1 / 1 / 2 / 2; }
+    .paragraph-1 { grid-area: 1 / 2 / 2 / 3; }
+
+
+    .education{
+
+    }
+
+    .education-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "jensen-logo rsamd-logo"
+    "jensen rsamd";
+    }
+
+.jensen-logo { 
+    background-image: url(../portfolio-assessment-images/jensen-logo.svg);
+    background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size:contain;
+    grid-area: jensen-logo; 
+}
+.rsamd-logo { 
+    background-image: url(../portfolio-assessment-images/rcs-logo.svg);
+    background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size:contain;
+    grid-area: rsamd-logo;
+}
+.jensen { grid-area: jensen; }
+.rsamd { grid-area: ; }
