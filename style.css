@@ -86,15 +86,13 @@ h6 {
 }
 
 .page-top .top h1,
-.page-top .top nav,
-.page-bottom .bottom-nav nav {
+.page-top .top nav {
 	order: 0;
 	flex: 0 1 auto;
 	align-self: auto;
 }
 
-.page-top .top nav ul,
-.page-bottom .bottom-nav nav ul {
+.page-top .top nav ul {
 	list-style: none;
 	width: auto;
 	display: flex;
@@ -105,8 +103,7 @@ h6 {
 	align-items: flex-start;
 }
 	
-.page-top .top nav li,
-.page-bottom .bottom-nav nav li {
+.page-top .top nav li{
 	order: 0;
 	flex: 0 1 auto;
 	align-self: auto;
@@ -375,30 +372,30 @@ list-style: none;
     padding-bottom:1em;
 }
  
- .page-bottom .bottom-nav ul li{
-     list-style: none;
-     display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-content: center;
-	align-items: flex-start;
-	font-size: 1.5em;
-	text-transform: uppercase;
-	padding-top: 1.5em;
+ .page-bottom .bottom-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: space-around;
+    align-items: flex-start;
+	  font-size: 1.5em;
+	  text-transform: uppercase;
+	  padding-top: 1.5em;
  }
 
- /*.page-bottom .bottom-nav li {
+ .page-bottom .bottom-nav li {
     order: 0;
 	flex: 0 1 auto;
 	align-self: auto;
 	padding-left: 1.5em;
 	text-decoration: none 
- }*/
+ }
  .page-bottom .bottom-nav li img{
-    /*display: block;
+    display: flex;
     margin-left: auto;
-    margin-right: auto;*/
+    margin-right: auto;
     width: 1.5em;
     height: 1.5em;
  }
@@ -509,7 +506,7 @@ list-style: none;
     mix-blend-mode:hard-light;
   }
   .background:hover:before{
-    animation:animate 2s linear infinite;
+    animation:animate 5s linear infinite;
   }
   @keyframes animate{
     0%{
@@ -533,7 +530,7 @@ list-style: none;
     filter:blur(1.3)
     }
     60%{
-    background-position: -15px 0;
+    background-position: -5px 0;
     }
     70%{
     background-position: 0 -10px;
@@ -595,5 +592,8 @@ grid-area: profile-pic
    height: 10em;
    width: 10em;
  }
-
+iframe {
+  width: 640px; 
+  height: 360px;
+}
 }
