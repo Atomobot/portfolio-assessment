@@ -143,6 +143,7 @@ main {
     color: #fff;
     width: 100%;
     margin: 0 auto;
+    border: 10px solid #111
 }
 
 main h2 {
@@ -150,7 +151,7 @@ main h2 {
 }
 
 .cell {
-    border: 1px solid #A01818;
+    border: 1px solid #07011B;
     padding: 3em 2em;
 }
 
@@ -379,6 +380,113 @@ list-style: none;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
+
+.contact {
+    
+}
+
+.contact input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #570000; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+  }
+
+
+.contact button[type=button] {
+    background-color:  #154367 ;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+.contact button[type=button]:hover {
+    background-color: #022138;
+  }
+  
+  
+ .contact .container {
+    border-radius: 5px;
+    background-color: #022138;
+    padding: 20px;
+  }
+
+.page-bottom {
+    background-color:#022138;
+    padding-bottom:1em;
+}
+ .page-bottom .bottom-nav {
+    
+ }
+
+ .page-bottom .bottom-nav ul{
+     list-style: none;
+     display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-content: stretch;
+	align-items: flex-start;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	padding-top: 1.5em;
+ }
+
+ .page-bottom .bottom-nav li {
+    order: 0;
+	flex: 0 1 auto;
+	align-self: auto;
+	padding-left: 1.5em;
+	text-decoration: none 
+ }
+ .page-bottom .bottom-nav li img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1.5em;
+    height: 1.5em;
+ }
+
+
+footer {
+   
+}
+
+footer h1 {
+
+}
+
+nav {
+
+}
+
+nav ul {
+
+}
+
+nav li {
+
+}
+
+.social-links {
+
+}
+
+.social-links ul {
+
+}
+
+.social-links ul li {
+
+} 
+
 @media (max-width: 820px){
   .img-slider{
     width: 600px;
@@ -463,114 +571,6 @@ list-style: none;
   }
 }
 
-
-.contact {
-    
-}
-
-.contact input[type=text], select, textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #570000; 
-    border-radius: 4px; 
-    box-sizing: border-box;
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical;
-  }
-
-
-.contact button[type=button] {
-    background-color:  #154367 ;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  
-.contact button[type=button]:hover {
-    background-color: #022138;
-  }
-  
-  
- .contact .container {
-    border-radius: 5px;
-    background-color: #022138;
-    padding: 20px;
-  }
-
-.page-bottom {
-   
-    padding-bottom:1em;
-}
- .page-bottom .bottom-nav {
-    
- }
-
- .page-bottom .bottom-nav ul{
-     list-style: none;
-     display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	align-content: stretch;
-	align-items: flex-start;
-	font-size: 1.5em;
-	text-transform: uppercase;
-	padding-top: 1.5em;
- }
-
- .page-bottom .bottom-nav li {
-    order: 0;
-	flex: 0 1 auto;
-	align-self: auto;
-	padding-left: 1.5em;
-	text-decoration: none 
- }
- .page-bottom .bottom-nav li img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1.5em;
-    height: 1.5em;
- }
-
-
-footer {
-   
-}
-
-footer h1 {
-
-}
-
-nav {
-
-}
-
-nav ul {
-
-}
-
-nav li {
-
-}
-
-.social-links {
-
-}
-
-.social-links ul {
-
-}
-
-.social-links ul li {
-
-} 
-
-
 @media screen and (min-width: 1100px){
 
 
@@ -579,7 +579,7 @@ nav li {
 .profile {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-row-gap: 10px;
     grid-template-areas: 
     "profile-pic"
@@ -617,17 +617,25 @@ grid-area: profile-pic
 }
 
 .achievements {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: px;
-    grid-row-gap: 10px;
-    grid-template-columns: 
-    "jensen-logo"
-    "jensen-p"
-    "rsamd-logo"
-    "rsamd-p";
-}
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: center;
+  }
+
+.achievements .jensen:nth-child(1) {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  }
+
+.achievements .rsamd:nth-child(2) {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: center;
+  }
 
 .achievements h2 {
     
