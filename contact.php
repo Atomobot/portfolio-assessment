@@ -5,7 +5,7 @@ if( !empty( $_POST ) ) {
 	foreach( $_POST as $key => $value ) {
 		$data[$key] = make_safe( $value );
 	}
-	$result = sendMail( 'Website message from' .$data['name'], 'smtp.gmail.com', 'not@anaddress.com', 'notapassword', '', $data['message'], 'pc@atomobot.se', $data['email'], $data['email'] );
+	$result = sendMail( 'Website message from' .$data['name'], 'smtp.gmail.com', 'not@anaddress.com', 'notapassword', '', $data['message'], 'not@anaddress.com', $data['email'], $data['email'] );
 	if( $result === TRUE ) { echo 'Thanks for your message'; }
 	else { echo 'Oops! Please try again later<br />'; print_r( $result ); }
 } else {
