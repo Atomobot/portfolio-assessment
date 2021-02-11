@@ -384,26 +384,30 @@ max-width: 80%;
  
  .page-bottom .bottom-nav ul {
     list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-content: space-around;
-    align-items: flex-start;
-	  font-size: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "top about exper inter conta gith linke";
+	  font-size: 1em;
 	  text-transform: uppercase;
 	  padding-top: 1.5em;
  }
 
+ .top { grid-area: tip; }
+.about { grid-area: about; }
+.exper { grid-area: exper; }
+.inter { grid-area: inter; }
+.conta { grid-area: conta; }
+.gith { grid-area: gith; }
+.linke { grid-area: linke; }
+
  .page-bottom .bottom-nav li {
-    order: 0;
-	flex: 0 1 auto;
-	align-self: auto;
-	padding-left: 1.5em;
 	text-decoration: none 
  }
  .page-bottom .bottom-nav li img{
-    display: flex;
+    display: grid;
     margin-left: auto;
     margin-right: auto;
     width: 1.5em;
